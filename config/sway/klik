@@ -1,0 +1,12 @@
+# klik-specific settings
+
+output DP-1 mode 1920x1080@143.981Hz scale 1 position 3840,0
+output DP-2 mode 3840x2160@59.997Hz scale 1 position 0,0
+output * bg #28a86d solid_color
+
+input type:pointer {
+	accel_profile "flat"
+	pointer_accel 1
+}
+
+input "1386:967:Wacom_Intuos_BT_M_Pen" map_to_output "DP-2"
