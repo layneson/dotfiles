@@ -69,7 +69,7 @@
   "ui_font_size": 17.0,
   "buffer_font_size": 14.0,
   "theme": {
-    "mode": "system",
+    "mode": "dark",
     "light": "Ayu Light",
     "dark": "VSCode Dark Modern",
   },
