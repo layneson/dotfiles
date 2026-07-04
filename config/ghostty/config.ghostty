@@ -1,0 +1,10 @@
+app-notifications = no-clipboard-copy
+command = /usr/bin/fish
+confirm-close-surface = false
+font-size = 16
+keybind = performable:ctrl+c=copy_to_clipboard
+selection-clear-on-copy = true
+split-inherit-working-directory = false
+tab-inherit-working-directory = false
+window-inherit-working-directory = false
+working-directory = home
