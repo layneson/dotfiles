@@ -13,3 +13,8 @@ input "1386:967:Wacom_Intuos_BT_M_Pen" map_to_output "DP-2"
 
 # Set mouse to lowest DPI by default.
 exec ratbagctl warbling-mara profile 0 resolution active set 0
+
+# exec swayidle -w timeout 60 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"'
+
+# Peter Alert
+bindsym $mod+p exec "java -classpath /home/layne/sources/PeterAlert/java-swing/PeterAlert.jar PeterAlertExample"
