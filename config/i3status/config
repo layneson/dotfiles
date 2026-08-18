@@ -16,6 +16,7 @@ general {
 # order += "battery all"
 #order += "load"
 
+order += "read_file codex"
 order += "volume default_sink"
 order += "path_exists private"
 order += "ethernet _first_"
@@ -65,4 +66,10 @@ memory {
 
 tztime local {
         format = "%Y-%m-%d %I:%M:%S (%H:%M:%S)"
+}
+
+read_file codex {
+				path = "~/.cache/codexusaged/remaining"
+				format = "Codex: %content"
+				format_bad = "?"
 }

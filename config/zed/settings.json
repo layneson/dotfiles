@@ -7,6 +7,8 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "cli_default_open_behavior": "existing_window",
+  "diff_view_style": "unified",
   "relative_line_numbers": "disabled",
   "gutter": {
     "line_numbers": true
@@ -22,6 +24,9 @@
     "trust_all_worktrees": true,
   },
   "terminal": {
+    "shell": {
+      "program": "fish"
+    },
     "font_size": 12.0,
   },
   "git": {
@@ -64,6 +69,7 @@
     "model_parameters": [],
   },
   "git_panel": {
+    "tree_view": true,
     "dock": "left",
   },
   "ui_font_size": 17.0,
