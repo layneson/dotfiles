@@ -11,6 +11,10 @@ input type:pointer {
 
 input "1386:967:Wacom_Intuos_BT_M_Pen" map_to_output "DP-2"
 
+input "1133:49271:Logitech_USB_Optical_Mouse" {
+    pointer_accel -0.1
+}
+
 # Set mouse to lowest DPI by default.
 exec ratbagctl warbling-mara profile 0 resolution active set 0
 

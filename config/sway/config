@@ -12,11 +12,10 @@ set $right l
 # Your preferred terminal emulator
 set $term ghostty
 # Your preferred application launcher
-# Note: pass the final command to swaymsg so that the resulting window can be opened
-# on the original workspace that the command was run on.
-# set $menu dmenu_path | dmenu | xargs swaymsg exec --
+# Use Fuzzel's launch prefix to open the window on the original workspace.
+# Fuzzel launches applications itself; do not pipe their output into xargs.
 
-set $menu fuzzel --font="Berkeley Mono" --background=0f0f0fee --text-color=ffffffff --selection-color=31b522ee --selection-text-color=000000ff --border-color=31b522ee --border-width=3 --inner-pad=15 --dpi-aware=yes | xargs swaymsg exec --
+set $menu fuzzel --font="Berkeley Mono" --background=0f0f0fee --text-color=ffffffff --selection-color=31b522ee --selection-text-color=000000ff --border-color=31b522ee --border-width=3 --inner-pad=15 --dpi-aware=yes --launch-prefix="swaymsg exec --"
 
 ### Output configuration
 #
@@ -202,7 +201,7 @@ bindsym $mod+r mode "resize"
 #
 
 mode "exit" {
-    bindsym s exec "systemctl suspend"; mode "default"; exec "killall swaynag"
+		bindsym --release --no-repeat s exec "systemctl suspend"; mode "default"; exec "killall swaynag"
     bindsym p exec systemctl poweroff
     bindsym r exec systemctl reboot
 		bindsym d exec swayidle -w timeout 1 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"; killall swayidle'; mode default; exec "killall swaynag"
