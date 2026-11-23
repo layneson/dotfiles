@@ -73,6 +73,7 @@ set $menu fuzzel --font="Berkeley Mono" --background=0f0f0fee --text-color=fffff
 
     # Launch firefox
     bindsym $mod+c exec firefox 
+		bindsym $mod+Shift+c exec firefox -private-window
 
 #
 # Volume
@@ -240,8 +241,7 @@ include /etc/sway/config.d/*
 for_window [shell="xwayland"] title_format "[XWayland] %title"
 
 bindsym Print exec "bash -c 'slurp | grim -g - - | wl-copy'"
-bindsym Control+Print exec "bash -c 'slurp | grim -g - - | tee >(wl-copy) | swappy -f -'"
-bindsym Shift+Print exec "bash -c 'slurp | grim -g - - >/tmp/screenshot.jpeg'"
+bindsym Control+Print exec "bash -c 'slurp | grim -g - - | tee >(wl-copy) | satty -f -'"
 
 # Include machine-specific config, symlinked to "./local".
 include local
