@@ -22,8 +22,8 @@ order += "read_file claude_weekly"
 order += "volume default_sink"
 order += "path_exists private"
 order += "ethernet _first_"
-order += "disk /"
-order += "memory"
+# order += "disk /"
+# order += "memory"
 order += "tztime local"
 
 volume default_sink {
@@ -52,19 +52,19 @@ battery all {
         format = "%status %percentage %remaining"
 }
 
-disk "/" {
-        format = "/ %avail"
-}
+# disk "/" {
+#         format = "/ %avail"
+# }
 
 load {
         format = "%1min"
 }
 
-memory {
-        format = "%used / %available"
-        threshold_degraded = "1G"
-        format_degraded = "MEMORY < %available"
-}
+# memory {
+#         format = "%used / %available"
+#         threshold_degraded = "1G"
+#         format_degraded = "MEMORY < %available"
+# }
 
 tztime local {
         format = "%Y-%m-%d %I:%M:%S (%H:%M:%S)"

@@ -8,4 +8,4 @@ This all should just be a script...
 
 - `ln -s $PWD/config/sway/config ~/.config/sway/config`
 - `ln -s $PWD/config/sway/$MY_MACHINE ~/.config/sway/local`
-- `ln -s $PWD/config/i3status/config ~/.config/i3status/config`
+- `ln -s $PWD/config/i3status/$MY_MACHINE ~/.config/i3status/config`
