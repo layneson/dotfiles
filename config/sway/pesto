@@ -1,0 +1,24 @@
+# pesto-specific settings
+
+output eDP-1 mode 2256x1504@59.999Hz scale 1
+
+input "2362:628:PIXA3854:00_093A:0274_Touchpad" {
+    tap enabled
+    drag enabled
+    scroll_factor 0.15
+    # middle_emulation disabled # seems to do nothing when enabled? Or do I just have to restart?
+}
+
+# For inputting accents, etc.
+input * {
+    xkb_options compose:ralt
+}
+
+#
+# Brightness
+#
+
+bindsym XF86MonBrightnessDown exec "sudo brightness adj -5"
+bindsym Shift+XF86MonBrightnessDown exec "sudo brightness adj -25"
+bindsym XF86MonBrightnessUp exec "sudo brightness adj 5"
+bindsym Shift+XF86MonBrightnessUp exec "sudo brightness adj 25"

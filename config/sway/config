@@ -21,6 +21,7 @@ set $menu fuzzel --font="Berkeley Mono" --background=0f0f0fee --text-color=fffff
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 # output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
+output * bg #8dd66f solid_color
 
 #
 # Example configuration:

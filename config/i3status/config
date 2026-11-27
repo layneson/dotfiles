@@ -17,6 +17,8 @@ general {
 #order += "load"
 
 order += "read_file codex"
+order += "read_file claude_session"
+order += "read_file claude_weekly"
 order += "volume default_sink"
 order += "path_exists private"
 order += "ethernet _first_"
@@ -70,6 +72,18 @@ tztime local {
 
 read_file codex {
 				path = "~/.cache/codexusaged/remaining"
-				format = "Codex: %content"
+				format = "Codex %content"
+				format_bad = "Codex ?"
+}
+
+read_file claude_session {
+				path = "~/.cache/claudeusaged/session"
+				format = "Claude 5h %content"
+				format_bad = "?"
+}
+
+read_file claude_weekly {
+				path = "~/.cache/claudeusaged/weekly"
+				format = "Claude wk %content"
 				format_bad = "?"
 }

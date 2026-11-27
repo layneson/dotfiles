@@ -2,7 +2,6 @@
 
 output DP-1 mode 2560x1440@170.002Hz scale 1 position 3840,0
 output DP-2 mode 3840x2160@59.997Hz scale 1 position 0,0
-output * bg #28a86d solid_color
 
 input type:pointer {
 	accel_profile "flat"
